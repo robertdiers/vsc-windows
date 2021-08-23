@@ -27,3 +27,7 @@ RUN sudo chmod +x /usr/local/bin/docker-compose
 RUN code-server --install-extension redhat.java
 RUN code-server --install-extension GabrielBB.vscode-lombok
 RUN code-server --install-extension ms-azuretools.vscode-docker
+
+#configure git
+RUN git config --global user.email "robert.diers@accenture.com"
+RUN git config --global user.name "Robert Diers"
