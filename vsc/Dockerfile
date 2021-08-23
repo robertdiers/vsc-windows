@@ -4,7 +4,7 @@ USER root
 
 #install environment requirements
 RUN apt update
-RUN apt install -y git wget curl maven
+RUN apt install -y git wget curl
 
 #install docker to startup environment
 RUN apt install -y apt-transport-https \

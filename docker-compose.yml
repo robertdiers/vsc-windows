@@ -13,7 +13,9 @@ services:
             #add socket required for docker push
             - /var/run/docker.sock:/var/run/docker.sock       
         environment:
-            - HOST_DIR=${HOST_DIR}
+            - VSC_HOST_DIR=${HOST_DIR}
+            - VSC_CONFIG_DIR=${HOST_DIR}\config
+            - VSC_GIT_DIR=${HOST_DIR}\git
         expose:
             - 8080
             
