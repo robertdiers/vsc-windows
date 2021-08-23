@@ -8,7 +8,7 @@ services:
         networks:
             git-net:
         volumes:
-            - ./config.yaml:/root/.config/code-server/config.yaml        
+            - ./config/config.yaml:/root/.config/code-server/config.yaml        
             - ./git:/home/coder/project
             #add socket required for docker push
             - /var/run/docker.sock:/var/run/docker.sock       
