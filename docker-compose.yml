@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+
+    vsc-server-git:
+        build: vsc
+        container_name: code-server-git
+        hostname: code-server-git
+        networks:
+            git-net:
+        volumes:
+            - ./config.yaml:/root/.config/code-server/config.yaml        
+            - ./git:/home/coder/project
+            #add socket required for docker push
+            - /var/run/docker.sock:/var/run/docker.sock       
+        expose:
+            - 8080
+            
+        ports:
+            - 8081:8080    
+
+networks:
+    git-net:
