@@ -26,3 +26,4 @@ RUN sudo chmod +x /usr/local/bin/docker-compose
 #install code extensions to browse code from all projects
 RUN code-server --install-extension redhat.java
 RUN code-server --install-extension GabrielBB.vscode-lombok
+RUN code-server --install-extension ms-azuretools.vscode-docker
