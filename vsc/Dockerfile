@@ -5,6 +5,7 @@ USER root
 #install environment requirements
 RUN apt update
 RUN apt install -y git wget curl
+RUN apt install -y openjdk-11-jdk
 
 #install docker to startup environment
 RUN apt install -y apt-transport-https \
